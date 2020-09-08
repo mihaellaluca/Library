@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Currently borrowed books</h3>
+  <div class="cards-container" *ngIf="hasBorrow">
+    <app-borrowed-product
+      *ngFor="let productBorrowed of products"
+      [productBorrowed]="productBorrowed"
+    ></app-borrowed-product>
+  </div>
+  <p *ngIf="!hasBorrow">You don't have any book currently borrowed.</p>
+</div>

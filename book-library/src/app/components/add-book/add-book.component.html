@@ -1,0 +1,36 @@
+<div class="add-book">
+  <h3>Add books to the library</h3>
+  <br>
+  <div class="container">
+    <form class="bookForm" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input type="text" name="title" formControlName="title" required />
+      </div>
+      <div class="form-group">
+        <label for="author">Author: </label>
+        <input type="text" name="author" formControlName="author" required />
+      </div>
+      <div class="form-group">
+        <label for="description">Description: </label>
+        <input type="text" name="description" formControlName="description" />
+      </div>
+      <div class="form-group">
+        <label for="sellPrice">Sell price: </label>
+        <input type="text" name="sellPrice" formControlName="sellPrice" />
+      </div>
+      <div class="form-group">
+        <label for="stock">How many: </label>
+        <input type="text" name="stock" formControlName="stock" required />
+      </div>
+      <button
+        type="submit"
+        value="Submit"
+        class="btn btn-primary"
+        [disabled]="!bookForm.valid"
+      >
+        Add
+      </button>
+    </form>
+  </div>
+</div>

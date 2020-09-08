@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>Create account</h3>
+  <br />
+  <form
+    class="form"
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()"
+    class="form-container"
+  >
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" formControlName="firstName" required />
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" formControlName="lastName" required />
+  </div>
+    <div class="form-group">
+      <label for="email">Your email:</label>
+      <input type="text" name="email" formControlName="email" required email />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        formControlName="password"
+        required
+      />
+    </div>
+    <div class="submitButton">
+      <button
+        [disabled]="registerForm.invalid"
+        type="submit"
+        value="submit"
+        class="btn btn-primary"
+      >
+        Create account
+      </button>
+    </div>
+  </form>
+</div>

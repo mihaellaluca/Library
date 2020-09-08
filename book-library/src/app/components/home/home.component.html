@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Books to borrow</h3>
+  <div class="search-container">
+    <!-- <app-search (searchcriteria)="searchThis($event)"></app-search> -->
+    <input
+    class="form-control"
+    type="text"
+    [(ngModel)]="searchWord"
+    (input)="searchThis()"
+    placeholder="Search your book ..."
+  />
+  </div>
+
+  <div class="cards-container">
+    <app-product
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-product>
+  </div>
+</div>
