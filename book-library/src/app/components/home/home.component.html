@@ -1,0 +1,13 @@
+<div class="container">
+  <h3>Books to borrow</h3>
+
+    <app-search (searchCriteria)="searchThis($event)"></app-search>
+
+  
+  <div class="cards-container">
+    <app-product
+      *ngFor="let product of productsSearched"
+      [product]="product"
+    ></app-product>
+  </div>
+</div>

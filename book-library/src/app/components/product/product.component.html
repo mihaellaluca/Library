@@ -1,0 +1,9 @@
+<div class="container">
+  <p>Title:{{ product.title }}</p>
+  <p>Author: {{ product.author }}</p>
+  <p>Description: {{ product.description }}</p>
+  <p>Sell price: {{ product.sellPrice }}</p>
+  <p>Currently available: {{ product.stock }}</p>
+  <button (click)="borrow()">Borrow book</button>
+  <button *ngIf="admin" (click)="deleteBook()">Delete book</button>
+</div>
