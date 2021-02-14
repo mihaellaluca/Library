@@ -16,11 +16,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService,
     private router: Router
-  ) {
-    if (this.authenticationService.currentUserValue) {
-      this.router.navigate(["/"]);
-    }
-  }
+  ) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -40,8 +36,6 @@ export class LoginComponent implements OnInit {
       this.f.password.value
     );
     this.loginForm.reset();
-    this.router.navigate([""]);
-
   }
 
   get f() {

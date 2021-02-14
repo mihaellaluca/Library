@@ -35,6 +35,7 @@ export class AuthenticationService {
             this.router.navigate([""]);
           } else {
             this.currentUserSubject.next(null);
+            window.alert("Login failed!");
           }
         },
         (error) => {
